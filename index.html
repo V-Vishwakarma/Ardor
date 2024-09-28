@@ -1,0 +1,2279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>A R D O R - S T U D I O</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/slick.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/et-line-font.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unit-test.css">
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/qt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./css/project-section.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+    <!--PRELOADER-->
+    <!-- <div class="prague-loader">
+        <div class="prague-loader-wrapper">
+            <div class="prague-loader-bar">
+                ARDOR
+                <br>
+                <p>Design Dimension</p>
+            </div>
+        </div>
+    </div>
+     -->
+
+
+
+
+
+
+    <style>
+        /* * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ body, html {
+     height: 100%;
+     overflow: hidden;
+ } */
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #loader-container {
+            text-align: center;
+        }
+
+        #loader-text {
+            color: white;
+            font-size: 3rem;
+            font-family: Arial, sans-serif;
+            display: flex;
+            gap: 0.2rem;
+            justify-content: center;
+        }
+
+        #loader-text span {
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: fade-in 0.5s ease forwards;
+        }
+
+        #loader-text span:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        #loader-text span:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        #loader-text span:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        #loader-text span:nth-child(4) {
+            animation-delay: 0.7s;
+        }
+
+        #loader-text span:nth-child(5) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        #fade-text {
+            color: white;
+            opacity: 0;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            animation: text-fade 2s ease 1.5s forwards;
+        }
+
+        @keyframes text-fade {
+            to {
+                opacity: 1;
+            }
+        }
+
+        #loader-text.move-up {
+            animation: move-up 1s ease forwards;
+            letter-spacing: 0.2rem;
+            /* Initial letter spacing */
+        }
+
+        @keyframes move-up {
+            to {
+                transform: translateY(-100vh);
+                letter-spacing: 30rem;
+                /* Increasing the gap between the letters */
+            }
+        }
+
+        #content {
+            display: none;
+            height: 100%;
+        }
+    </style>
+
+
+
+
+    <div id="preloader">
+        <div id="loader-container">
+            <h1 id="loader-text">
+                <span style="font-size: 50px; font-weight: 800;">A</span>
+                <span style="font-size: 50px; font-weight: 800;">R</span>
+                <span style="font-size: 50px; font-weight: 800;">D</span>
+                <span style="font-size: 50px; font-weight: 800;">O</span>
+                <span style="font-size: 50px; font-weight: 800;">R</span>
+            </h1>
+            <p id="fade-text">Design Dimension</p>
+        </div>
+    </div>
+
+
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            const content = document.getElementById('content');
+            const loaderText = document.getElementById('loader-text');
+
+            // First, show letters one by one
+            setTimeout(() => {
+                loaderText.classList.add('move-up'); // Move text upwards and increase letter spacing
+            }, 2000); // Delay before text moves up
+
+            // Hide preloader and show content after animation completes
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                content.style.display = 'block';
+                document.body.style.overflow = 'auto'; // Allow scrolling once the website is visible
+            }, 3000); // 3 seconds total delay for preloader
+        });
+    </script>
+
+
+
+
+
+
+
+    <!--/PRELOADER-->
+
+
+
+
+
+    <!--HEADER-->
+    <header class="prague-header simple sticky-menu sticky-mobile-menu light ">
+        <!--LOGO-->
+        <div class="prague-logo">
+            <a href="index.html" class="logo_link">
+                <span style="line-height: 0;" class="text_logo">Ardor <span style="font-size: 10px; line-height: 28px;">
+                        <br> Art of Define Spaces</span> </span>
+            </a>
+        </div>
+        <!--/LOGO-->
+
+        <div class="prague-header-wrapper">
+
+            <!--NAVIGATION-->
+            <div class="prague-navigation">
+                <div class="pargue-navigation-wrapper">
+                    <div class="prague-navigation-inner">
+
+
+                        <nav>
+                            <ul class="main-menu">
+                                <li
+                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children ">
+                                    <a href="/">Home</a>
+                                </li>
+                                <li
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                                    <a href="about.html">About Us</a>
+                                </li>
+
+                                <li
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="projects.html">Projects</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                href="Interior.html">Interior
+                                            </a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                href="architecture.html">Architecture</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                href="commercial.html">Commercial</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                href="cig.html">CGI</a></li>
+                                    </ul>
+
+                                </li>
+                                <li
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                    <a href="https://ardorblog.blogspot.com/">Blogs</a>
+                                    <!-- <a href="https://dash.elfsight.com/apps/blog">Blogs</a> -->
+                                </li>
+                                <li class="menu-item">
+                                    <a id="talkToUsButton">TALK TO US</a>
+                                    <!-- The form will be displayed on click -->
+                                    <div class="contact-form" id="contactForm">
+                                        <h3>Contact Us</h3>
+                                        <form>
+                                            <label style="font-size: 14px; font-weight: 400;" for="name">Name*</label>
+                                            <input id="hover-input" type="text" id="name" name="name" required>
+
+                                            <label style="font-size: 14px; font-weight: 400;" for="phone">Phone
+                                                Number*</label>
+                                            <input id="hover-input" type="text" id="name" name="name" required>
+
+                                            <label style="font-size: 14px; font-weight: 400;" for="email">Email*</label>
+                                            <input id="hover-input" type="email" id="email" name="email" required>
+
+                                            <label style="font-size: 14px; font-weight: 400;" for="service">Our
+                                                Service*</label>
+                                            <select class="hover-select" id="service" name="service" required>
+                                                <option value="">-- Select --</option>
+                                                <option value="service1">Interior Design</option>
+                                                <option value="service1">Residential Design</option>
+                                                <option value="service1">Commercial Design</option>
+                                                <option value="service2">Architecture Services</option>
+                                            </select>
+
+                                            <button type="submit">Submit</button>
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+            <!--/NAVIGATION-->
+            <!-- clicked form style and script  -->
+            <style>
+                /* Styling the list item */
+                .menu-item #talkToUsButton {
+                    background: #c27629;
+                    color: white;
+                    /* padding: 10px 20px; */
+                    text-decoration: none;
+                    display: inline-block;
+                    cursor: pointer;
+                }
+
+                /* Hide the form initially */
+                .contact-form {
+                    display: none;
+                    position: absolute;
+                    top: 50px;
+                    right: 50px;
+                    background-color: white;
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    width: 310px;
+                    height: 380px;
+                    z-index: 1000;
+                    text-align: left;
+                    border-radius: 7px;
+                }
+
+                .contact-form h3 {
+                    font-size: 20px;
+                    margin: 0 auto;
+                }
+
+                /* Additional form styling */
+
+                .hover-select {
+                    display: block;
+                    width: 100%;
+                    padding: 5px;
+                    border-radius: 5px;
+                    /* margin: 5px 0; */
+                    /* padding: 5px; */
+                    box-sizing: border-box;
+                }
+
+                #hover-input {
+                    padding: 0px;
+                    margin: 0;
+                }
+
+                button {
+                    background-color: #c27629;
+                    color: white;
+                    padding: 15px 10px;
+                    border: none;
+                    cursor: pointer;
+                    width: 100%;
+                    border-radius: 5px;
+                    margin-top: 5px;
+                    font-size: 12px;
+                }
+
+                button:hover {
+                    background-color: #a65a1e;
+                }
+            </style>
+            </style>
+            <script>
+                // Get the button and form elements
+                const talkToUsButton = document.getElementById('talkToUsButton');
+                const contactForm = document.getElementById('contactForm');
+
+                // Toggle form visibility on button click
+                talkToUsButton.addEventListener('click', function () {
+                    if (contactForm.style.display === 'block') {
+                        contactForm.style.display = 'none';
+                    } else {
+                        contactForm.style.display = 'block';
+                    }
+                });
+
+                // Close the form if clicked outside
+                document.addEventListener('click', function (event) {
+                    if (!talkToUsButton.contains(event.target) && !contactForm.contains(event.target)) {
+                        contactForm.style.display = 'none';
+                    }
+                });
+            </script>
+            <!-- clicked form style and script  -->
+
+
+
+
+            <!-- mobile icon -->
+            <div class="prague-nav-menu-icon">
+                <a href="#">
+                    <i></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!--END HEADER-->
+
+    <!--MAIN BODY-->
+
+    <!-- 
+    <div class="hero">
+        <div class="hero-slider">
+            <img src="img/fullscreen-slider-new/banner_img_1.jpg" alt="Image 1" class="slide1">
+            <img src="img/fullscreen-slider-new/r-2.png" alt="Image 2" class="slide1">
+            <img src="img/fullscreen-slider-new/r-3.png" alt="Image 3" class="slide1">
+            <img src="img/fullscreen-slider-new/r-4.png" alt="Image 4" class="slide1">
+            <img src="img/fullscreen-slider-new/r1.png" alt="Image 5" class="slide1">
+        </div>
+    </div>
+
+    <script src="/js/hero_slider.js"></script> -->
+
+    <div>
+        <!-- Slider Container -->
+        <div class="slider-container" style="height: 80vh;">
+            <!-- Slider Content -->
+            <div id="heroslider" class="heroslider" style="height: 70vh;">
+                <div class="heroslide" style="height: 80vh;">
+                    <img src="img/fullscreen-slider-new/banner_img_1.jpg" class="heroimage" alt="Slider Image 1">
+                </div>
+                <div class="heroslide" style="height: 80vh;">
+                    <img src="img/fullscreen-slider-new/r-2.png" class="heroimage" alt="Slider Image 2">
+                </div>
+                <div class="heroslide" style="height: 80vh;">
+                    <img src="img/fullscreen-slider-new/r-3.png" class="heroimage" alt="Slider Image 3">
+                </div>
+                <div class="heroslide" style="height: 80vh;">
+                    <img src="img/fullscreen-slider-new/r-4.png" class="heroimage" alt="Slider Image 4">
+                </div>
+                <div class="heroslide" style="height: 80vh;">
+                    <img src="img/fullscreen-slider-new/r1.png" class="heroimage" alt="Slider Image 5">
+                </div>
+            </div>
+        </div>
+
+        <!-- Auto-slide Script -->
+        <script>
+            const heroslider = document.getElementById('heroslider');
+            let currentIndex = 0;
+            const heroslides = heroslider.children.length;
+
+            function autoSlide() {
+                currentIndex = (currentIndex + 1) % heroslides;
+                heroslider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            setInterval(autoSlide, 3000);
+        </script>
+    </div>
+
+    <!-- CSS Styles -->
+    <style>
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .heroslider {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .heroslide {
+            flex-shrink: 0;
+            width: 100%;
+        }
+
+        .heroimage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+    <!-- /main body  -->
+
+    <!-- insta-feeds -->
+    <div class="no-padd" style="max-width: 95%; margin: 0 auto; margin-top: 50px;">
+        <div class="elfsight-app-0b2ce19b-6359-499c-ae29-42f483a46d89" data-elfsight-app-lazy></div>
+    </div>
+
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="no-padd " style="margin: 0 auto; margin-top: 50px;">
+        <div class="elfsight-app-41567b9d-5689-4288-a302-f55bc05b8b48 blogs" data-elfsight-app-lazy></div>
+    </div>
+    <!-- /insta-feeds -->
+
+
+    <!--projects -->
+    <div class="container no-padd">
+        <div class="row-fluid  margin-lg-70t">
+            <div
+                class="wpb_column vc_column_container no-padd col-sm-10 col-lg-6 col-md-offset-0 col-md-6 col-sm-offset-1 col-xs-12  margin-lg-65t margin-sm-0t">
+                <div class="vc_column-inner no-padd-md">
+                    <div class="prague-counter  multi_item no-figure">
+
+                        <div class="figures ">
+                            <!-- triangle -->
+                        </div>
+
+                        <div class="counter-outer" style="padding:10px;">
+
+                            <img src="img/interior/Ardor/1.jpeg" alt="numbers photo"
+                                class="prague-counter-img s-img-switch">
+
+                            <div class="numbers">
+                                <svg>
+                                    <defs>
+                                        <mask id="coming_mask_0" x="0" y="0">
+                                            <rect class="coming-alpha" x="0" y="0" width="100%" height="100%"></rect>
+                                            <text class="count number" x="52%" y="47%" text-anchor="middle"
+                                                alignment-baseline="middle">157</text>
+                                            <text class="count title" x="54%" y="80%" text-anchor="middle"
+                                                alignment-baseline="middle">PROJECTS DONE</text>
+                                        </mask>
+                                    </defs>
+                                    <rect style="-webkit-mask: url(#coming_mask_0); mask: url(#coming_mask_0);"
+                                        class="base" x="0" y="0" width="100%" height="100%"></rect>
+                                </svg>
+                                <svg>
+                                    <defs>
+                                        <mask id="coming_mask_1" x="0" y="0">
+                                            <rect class="coming-alpha" x="0" y="0" width="100%" height="100%"></rect>
+                                            <text class="count number" x="46%" y="47%" text-anchor="middle"
+                                                alignment-baseline="middle">86</text>
+                                            <text class="count title" x="46%" y="80%" text-anchor="middle"
+                                                alignment-baseline="middle">HAPPY CLIENTS</text>
+                                        </mask>
+                                    </defs>
+                                    <rect style="-webkit-mask: url(#coming_mask_1); mask: url(#coming_mask_1);"
+                                        class="base" x="0" y="0" width="100%" height="100%"></rect>
+                                </svg>
+                                <svg>
+                                    <defs>
+                                        <mask id="coming_mask_2" x="0" y="0">
+                                            <rect class="coming-alpha" x="0" y="0" width="100%" height="100%"></rect>
+                                            <text class="count number" x="52%" y="35%" text-anchor="middle"
+                                                alignment-baseline="middle">924</text>
+                                            <text class="count title" x="54%" y="68%" text-anchor="middle"
+                                                alignment-baseline="middle">WORKING HOURS</text>
+                                        </mask>
+                                    </defs>
+                                    <rect style="-webkit-mask: url(#coming_mask_2); mask: url(#coming_mask_2);"
+                                        class="base" x="0" y="0" width="100%" height="100%"></rect>
+                                </svg>
+                                <svg>
+                                    <defs>
+                                        <mask id="coming_mask_3" x="0" y="0">
+                                            <rect class="coming-alpha" x="0" y="0" width="100%" height="100%"></rect>
+                                            <text class="count number" x="46%" y="35%" text-anchor="middle"
+                                                alignment-baseline="middle">13</text>
+                                            <text class="count title" x="46%" y="68%" text-anchor="middle"
+                                                alignment-baseline="middle">AWARDS</text>
+                                        </mask>
+                                    </defs>
+                                    <rect style="-webkit-mask: url(#coming_mask_3); mask: url(#coming_mask_3);"
+                                        class="base" x="0" y="0" width="100%" height="100%"></rect>
+                                </svg>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="no-padd  padding-sm-60b col-sm-12 col-lg-offset-1 col-lg-5 col-md-offset-0 col-md-6 col-xs-12  margin-sm-20t">
+                <div class="vc_column-inner no-padd-md">
+                    <div class="heading  left dark">
+
+                        <div class="subtitle ">NUMBERS</div>
+                        <h2 class="title">Make with love<br />
+                            all what we do.</h2>
+                        <div class="content ">
+                            <p>Our team takes over everything, from an idea and concept development to realization.
+                                We believe in traditions and incorporate them within our innovations. All our
+                                projects incorporate a unique artistic image and functional solutions.</p>
+                            <p>Client is the soul of the project. Our main goal is to illustrate his/hers values
+                                and individuality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid  margin-lg-55t no-padd-md">
+            <div class=" margin-lg-55t col-sm-12 margin-lg-30b ">
+                <div class=" no-padd">
+                    <div class="heading  left dark">
+
+                        <!-- <div class="subtitle ">LAST PROJECTS</div> -->
+                        <!-- <h2 class="title">Make it with passion.</h2> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to animate the counter
+        function animateCounter(element, target) {
+            let count = 0;
+            let speed = 150; // Adjust the speed of the counter
+
+            function updateCounter() {
+                const increment = target / speed; // Increment based on the target and speed
+                count += increment;
+
+                if (count < target) {
+                    element.textContent = Math.floor(count);
+                    requestAnimationFrame(updateCounter); // Continue the animation
+                } else {
+                    element.textContent = target; // Stop at the target value
+                }
+            }
+
+            updateCounter();
+        }
+
+        // Function to observe when the section is in the viewport
+        function createObserver() {
+            const options = {
+                root: null, // Use the viewport as the root
+                threshold: 0.5 // Trigger when 50% of the section is visible
+            };
+
+            const observer = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // When section is in viewport, start the animation
+                        const numbers = [
+                            { element: document.querySelector("#coming_mask_0 .number"), target: 157 },
+                            { element: document.querySelector("#coming_mask_1 .number"), target: 86 },
+                            { element: document.querySelector("#coming_mask_2 .number"), target: 924 },
+                            { element: document.querySelector("#coming_mask_3 .number"), target: 13 },
+                        ];
+
+                        numbers.forEach(item => {
+                            animateCounter(item.element, item.target);
+                        });
+
+                        observer.disconnect(); // Stop observing after animation runs
+                    }
+                });
+            }, options);
+
+            // Observe the section with numbers
+            const targetSection = document.querySelector('.prague-counter');
+            observer.observe(targetSection);
+        }
+
+        // Wait until the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            createObserver();
+        });
+
+    </script>
+
+    <!--/projects -->
+
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div style="margin-bottom: 40px;" class="elfsight-app-13cbf8f0-bca2-447a-9d8f-55b3f2f64ca6" data-elfsight-app-lazy>
+    </div>
+
+
+    <!-- service -->
+    <div class="row-fluid row-no-padding">
+        <div class="no-padd col-sm-12">
+            <div class="column-inner">
+                <div class="prague-shortcode-parent">
+                    <div class="prague-shortcode-parent-img">
+                        <span class="overlay"></span>
+                        <img src="img/fullscreen-slider/slider-04.jpg" class="s-img-switch" alt="middle-banner image" />
+                    </div>
+
+                    <div class="prague-shortcode-content-wrapp">
+                        <div class="prague-shortcode-heading light left">
+                            <div class="parent-subtitle">SERVICES</div>
+                            <h2 class="parent-title">This is what we do.</h2>
+                        </div>
+
+                        <div data-unique-key="0bf3c8aa9017e52dd041b7e2c3327621" class="js-load-more" data-start-page="1"
+                            data-max-page="2" data-next-link="onepage-home.html">
+                            <div class="row prague_services prague_count_col4 prague_gap_col15 no-footer-content prague-load-wrapper"
+                                data-columns="prague_count_col4" data-gap="prague_gap_col15">
+                                <div class="portfolio-item-wrapp prague_filter_class">
+                                    <div class="portfolio-item">
+                                        <div class="prague-services-wrapper">
+                                            <img src="img/house.png" style="margin-bottom: 10px;  width:64px;" />
+                                            <h3 class="services-item-title">Residential</h3>
+                                            <div class="services-item-description">
+                                                <p>Crafting Unique Residential Spaces with Thoughtful Design Solutions.
+                                                </p>
+                                            </div>
+                                            <a href="residential.html" class="prague-services-link a-btn-2 creative"
+                                                target="_self">
+                                                <span class="a-btn-line"></span>
+                                                READ
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item-wrapp prague_filter_class p_f_f9e81a7 column_paralax">
+                                    <div class="portfolio-item">
+                                        <div class="prague-services-wrapper">
+                                            <img src="img/skyline.png" style="margin-bottom: 10px; width:64px;" />
+                                            <h3 class="services-item-title">Commercial</h3>
+                                            <div class="services-item-description">
+                                                <p>Enhance Commercial Spaces with Expertise and Innovative Design
+                                                    Solutions.
+                                                </p>
+                                            </div>
+                                            <a href="commercial.html" class="prague-services-link a-btn-2 creative"
+                                                target="_self">
+                                                <span class="a-btn-line"></span>
+                                                READ
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item-wrapp prague_filter_class p_f_f9e81a7">
+                                    <div class="portfolio-item">
+                                        <div class="prague-services-wrapper">
+                                            <img src="img/interior-design.png"
+                                                style="margin-bottom: 10px;  width:64px;" />
+                                            <h3 class="services-item-title">Architecture</h3>
+                                            <div class="services-item-description">
+                                                <p>Elevate Your Interior Design with Expertise, Innovation, and Creative
+                                                    Solutions.</p>
+                                            </div>
+                                            <a href="Interior.html" class="prague-services-link a-btn-2 creative"
+                                                target="_self">
+                                                <span class="a-btn-line"></span>
+                                                READ
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item-wrapp prague_filter_class">
+                                    <div class="portfolio-item">
+                                        <div class="prague-services-wrapper">
+                                            <img src="img/cgi.png" style="margin-bottom: 10px;  width:64px;" />
+                                            <h3 class="services-item-title">CGI</h3>
+                                            <div class="services-item-description">
+                                                <p>CGI: Transforming Spaces with Expertise and Innovative Solutions.</p>
+                                            </div>
+                                            <a href="cig.html" class="prague-services-link a-btn-2 creative"
+                                                target="_self">
+                                                <span class="a-btn-line"></span>
+                                                READ
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/service-->
+
+    <!-- projects -->
+
+    <div class="container-fluid no-padd">
+        <div class="row-fluid margin-lg-55t no-padd-md">
+            <div class="margin-lg-55t col-sm-12 margin-lg-30b">
+                <div class="no-padd">
+                    <div class="heading left dark">
+                        <div style="font-weight: 500;" class="subtitle latest">LATEST PROJECTS</div>
+                        <h2 class="title">Make it with passion.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 20vh;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .latest {
+            animation: blink 1s infinite;
+        }
+
+        .container1x {
+            position: relative;
+            width: 1160px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            transform-style: preserve-3d;
+            perspective: 500px;
+            margin: auto;
+            margin-top: -50px;
+            margin-bottom: 10px;
+        }
+
+        .container1x .box1x {
+            position: relative;
+            width: 275px;
+            height: 275px;
+            background: #000;
+            transition: 0.5s;
+            transform-style: preserve-3d;
+            overflow: hidden;
+            margin-right: 15px;
+            margin-top: 45px;
+        }
+
+        .container1x:hover .box1x {
+            transform: rotateY(25deg);
+        }
+
+        .container1x .box1x:hover~.box1x {
+            transform: rotateY(-25deg);
+        }
+
+        .container1x .box1x:hover {
+            transform: rotateY(0deg) scale(1.25);
+            z-index: 1;
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .container1x .box1x .imgBx {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container1x .box1x .imgBx:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgb(233, 180, 180), #000);
+            z-index: 1;
+            opacity: 0;
+            transition: 0.5s;
+            mix-blend-mode: multiply;
+        }
+
+        .container1x .box1x:hover .imgBx:before {
+            opacity: 1;
+        }
+
+        .container1x .box1x .imgBx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container1x .box1x .content1x {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            padding: 20px;
+            align-items: flex-end;
+            box-sizing: border-box;
+        }
+
+        .container1x .box1x .content1x h2 {
+            color: #fff;
+            transition: 0.5s;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-size: 20px;
+            transform: translateY(200px);
+            transition-delay: 0.3s;
+        }
+
+        .container1x .box1x:hover .content1x h2 {
+            transform: translateY(0px);
+        }
+
+        .container1x .box1x .content1x p {
+            color: #fff;
+            transition: 0.5s;
+            font-size: 14px;
+            transform: translateY(200px);
+            transition-delay: 0.4s;
+            line-height: 20px;
+        }
+
+        .container1x .box1x:hover .content1x p {
+            transform: translateY(0px);
+        }
+    </style>
+
+    <div class="container-fluid no-padd">
+        <!-- Honda Project -->
+
+
+
+        <style>
+            .lpbody {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f0f0f0;
+                user-select: none;
+                vertical-align: middle;
+                /* margin-top: -50px; */
+
+
+            }
+
+            .lprow-container.enlarged {
+                margin-top: 50px;
+            }
+
+            .lprow-container {
+
+                margin-bottom: -150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                transition: all 1.5s ease;
+            }
+
+            .lpswiper-container {
+                display: flex;
+                overflow: hidden;
+                width: 95%;
+                position: relative;
+                height: 60vh;
+                transition: all 1.5s ease;
+                /* justify-content: center; */
+                /* align-items: center; */
+                /* padding-left: 550px; */
+            }
+
+            .lpswiper-wrapper {
+                display: flex;
+                transition: transform 1.5s ease;
+                text-align: center;
+            }
+
+            .lpswiper-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                padding: 10px;
+                flex-shrink: 0;
+                box-sizing: border-box;
+            }
+
+            .lpheading {
+                font-size: 20px;
+                transition: transform 1.5s ease;
+                margin-right: 55px;
+            }
+
+            .lpimage {
+                width: 380px;
+                transition: transform 1.5s ease;
+                cursor: pointer;
+            }
+
+            .lpimage.enlarged {
+                transform: scale(1.6);
+            }
+
+            .lpheading.enlarged {
+                transform: scale(1.2);
+                margin-right: 128px;
+            }
+
+            .lpabout-image {
+                opacity: 0;
+                transform: translateX(100%);
+                transition: transform 1.5s ease, opacity 1.5s ease;
+                max-width: 200px;
+                margin-top: 10px;
+            }
+
+            .lpabout-image.visible {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .extra-images {
+                display: flex;
+                gap: 60px;
+                opacity: 0;
+                transform: translateX(100%);
+                transition: transform 1.5s ease, opacity 1.5s ease;
+            }
+
+            .extra-images img {
+                width: 420px;
+                height: 420px;
+                object-fit: cover;
+            }
+
+            .extra-images.visible {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            /* Invisible button areas */
+            .left-zone,
+            .right-zone {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 12%;
+                cursor: pointer;
+                z-index: 1;
+            }
+
+            .left-zone {
+                left: 0;
+                cursor: url('./img/icons8-left-arrow-new.png'), auto;
+            }
+
+            .right-zone {
+                right: 0;
+                cursor: url('./img/icons8-right-arrow-new.png'), auto;
+            }
+
+            .left-zone,
+            .right-zone {
+                background: transparent;
+            }
+
+            .no-select .lpimage {
+                pointer-events: none;
+            }
+
+            .no-select {
+                cursor: grabbing !important;
+            }
+
+            .lpone {
+                margin-left: 50px;
+            }
+
+            .lptwo {
+                margin-left: 50px;
+            }
+
+            .lpthree {}
+
+            .lpfour {}
+
+            .lpfive {}
+
+            /* Responsive Styling */
+            @media screen and (max-width: 1200px) {}
+
+            @media screen and (max-width: 1350px) {
+                .lpabout-image {
+                    display: none;
+                }
+
+                .main-swiper-section {
+                    padding-left: 200px;
+                }
+
+                .lpimage.enlarged {
+                    margin-top: 50px;
+                }
+            }
+
+            @media screen and (max-width: 992px) {
+                .main-swiper-section {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .extra-images {
+
+                    padding-top: 200px;
+                    height: 10vh;
+                }
+
+                .lpabout-image {
+                    display: none;
+                }
+
+                .lpheading {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+
+                .lpswiper-wrapper {
+                    flex-direction: column;
+                }
+
+                .lpimage {
+                    width: 260px;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .lpimage {
+                    width: 220px;
+                }
+
+                .lpheading {
+                    text-align: center;
+                    font-size: 18px;
+                    margin-right: 0;
+                }
+
+                .lprow-container {
+                    margin-bottom: 30px;
+                }
+            }
+
+            @media screen and (max-width: 576px) {
+                .main-swiper-section {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .lpimage {
+                    width: 180px;
+                }
+
+                .lpheading {
+                    font-size: 16px;
+                }
+
+                .lpheading.enlarged {
+                    margin-bottom: 50px;
+                }
+
+                .lprow-container {
+                    margin-bottom: 20px;
+                }
+            }
+        </style>
+
+        <div class="lpbody">
+            <!-- Row 1 -->
+            <div class="lprow-container">
+                <div class="lpswiper-container">
+                    <div class="lpswiper-wrapper"
+                        style="margin-left: 100px; align-items: center; text-align: center; justify-content: start;">
+                        <!-- Main Image and Heading -->
+                        <div class="lpswiper-item main-swiper-section" style="margin-left:-250px ;">
+                            <h1 class="lpheading">Flow More</h1>
+                            <img class="lpimage lpone" src="./img/flow-more-new/IMG_20200107_150236.jpg"
+                                alt="Main Image">
+                        </div>
+
+                        <!-- About Section -->
+                        <div class="lpswiper-item" style="margin-left:-170px ; display: flex; justify-content: left;">
+                            <p class="lpabout-image lpabout-section-responsive">This is an additional description about
+                                the
+                                image in Row 1. Lorem ipsum...
+                            </p>
+                        </div>
+
+                        <!-- Extra Images -->
+                        <div class="lpswiper-item extra-images"
+                            style="display: flex; flex-direction: row; margin-left:-910px ; justify-content: left;">
+                            <img src="img/flow-more-new/IMG_20200107_150244.jpg" alt="Extra Image 1">
+                            <img src="img/flow-more-new/IMG_20200107_150553.jpg" alt="Extra Image 2">
+                            <img src="img/flow-more-new/IMG_20200107_150745.jpg" alt="Extra Image 3">
+                            <img src="img/flow-more-new/IMG_20200107_151412.jpg" alt="Extra Image 4">
+                        </div>
+                    </div>
+                    <div class="left-zone"></div>
+                    <div class="right-zone"></div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="lprow-container">
+                <div class="lpswiper-container">
+                    <div class="lpswiper-wrapper" style="margin-left: 110px">
+                        <!-- Main Image and Heading -->
+                        <div class="lpswiper-item main-swiper-section" style="margin-left:-250px ;">
+                            <h1 class="lpheading">La Royal</h1>
+                            <img class="lpimage lptwo" src="./img/la-royal-new/la1.jpeg" alt="Main Image">
+                        </div>
+
+                        <!-- About Section -->
+                        <div class="lpswiper-item" style="margin-left:-170px ; display: flex; justify-content: left;">
+                            <p class="lpabout-image">This is an additional description about the image in Row 2. Lorem
+                                ipsum...
+                            </p>
+                        </div>
+
+                        <!-- Extra Images -->
+                        <div class="lpswiper-item extra-images"
+                            style="display: flex; flex-direction: row; margin-left:-910px ; justify-content: left;">
+                            <img src="img/la-royal-new/la2.jpg" alt="Extra Image 1">
+                            <img src="img/la-royal-new/la3.jpg" alt="Extra Image 2">
+                            <img src="img/la-royal-new/la4.jpeg" alt="Extra Image 3">
+                            <img src="img/la-royal-new/la5.jpeg" alt="Extra Image 4">
+                        </div>
+                    </div>
+                    <div class="left-zone"></div>
+                    <div class="right-zone"></div>
+                </div>
+            </div>
+
+            <div class="lprow-container" style="margin-top: 50px;">
+                <div class="lpswiper-container">
+                    <div class="lpswiper-wrapper" style="margin-left: 100px;">
+                        <!-- Main Image and Heading -->
+                        <div class="lpswiper-item main-swiper-section" style="margin-left:-250px ;">
+                            <h1 class="lpheading">Tech-Mahindra</h1>
+                            <img class="lpimage lpthree" src="img/tech-mahindra-new/tech7.jpeg" alt="Main Image">
+                        </div>
+
+                        <!-- About Section -->
+                        <div class="lpswiper-item" style="margin-left:-170px ; display: flex; justify-content: left;">
+                            <p class="lpabout-image">This is an additional description about the image in Row 2. Lorem
+                                ipsum...
+                            </p>
+                        </div>
+
+                        <!-- Extra Images -->
+                        <div class="lpswiper-item extra-images"
+                            style="display: flex; flex-direction: row; margin-left:-910px ; justify-content: left;">
+                            <img src="img/tech-mahindra-new/tech2.jpeg" alt="Extra Image 1">
+                            <img src="img/tech-mahindra-new/tech3.jpeg" alt="Extra Image 2">
+                            <img src="img/tech-mahindra-new/tech4.jpeg" alt="Extra Image 3">
+                            <img src="img/tech-mahindra-new/tech5.jpeg" alt="Extra Image 4">
+                        </div>
+                    </div>
+                    <div class="left-zone"></div>
+                    <div class="right-zone"></div>
+                </div>
+            </div>
+
+            <div class="lprow-container">
+                <div class="lpswiper-container">
+                    <div class="lpswiper-wrapper" style="margin-left: 170px">
+                        <!-- Main Image and Heading -->
+                        <div class="lpswiper-item main-swiper-section" style="margin-left:-250px ;">
+                            <h1 class="lpheading">Honda</h1>
+                            <img class="lpimage" src="./img/honda-new/honda1.jpg" alt="Main Image">
+                        </div>
+
+                        <!-- About Section -->
+                        <div class="lpswiper-item" style="margin-left:-170px ; display: flex; justify-content: left;">
+                            <p class="lpabout-image lpfour">This is an additional description about the image in Row 2.
+                                Lorem
+                                ipsum...
+                            </p>
+                        </div>
+
+                        <!-- Extra Images -->
+                        <div class="lpswiper-item extra-images"
+                            style="display: flex; flex-direction: row; margin-left:-910px ; justify-content: left;">
+                            <img src="./img/honda-new/honda2.jpeg" alt="Extra Image 1">
+                            <img src="./img/honda-new/honda3.jpeg" alt="Extra Image 2">
+                            <img src="./img/honda-new/honda4.jpeg" alt="Extra Image 3">
+                            <img src="./img/honda-new/honda5.jpeg" alt="Extra Image 4">
+                        </div>
+                    </div>
+                    <div class="left-zone"></div>
+                    <div class="right-zone"></div>
+                </div>
+            </div>
+
+            <div class="lprow-container" style="margin-top: 50px;">
+                <div class="lpswiper-container">
+                    <div class="lpswiper-wrapper" style="margin-left: 130px">
+                        <!-- Main Image and Heading -->
+                        <div class="lpswiper-item main-swiper-section" style="margin-left:-250px ;">
+                            <h1 class="lpheading">Acer Aspire</h1>
+                            <img class="lpimage lpfive" src="img/acer-aspire-new/ace6.jpeg" alt="Main Image">
+                        </div>
+
+                        <!-- About Section -->
+                        <div class="lpswiper-item" style="margin-left:-170px ; display: flex; justify-content: left;">
+                            <p class="lpabout-image">This is an additional description about the image in Row 2. Lorem
+                                ipsum...
+                            </p>
+                        </div>
+
+                        <!-- Extra Images -->
+                        <div class="lpswiper-item extra-images"
+                            style="display: flex; flex-direction: row; margin-left:-910px ; justify-content: left;">
+                            <img src="img/acer-aspire-new/ace2.jpeg" alt="Extra Image 1">
+                            <img src="img/acer-aspire-new/ace3.jpeg" alt="Extra Image 2">
+                            <img src="img/acer-aspire-new/ace4.jpeg" alt="Extra Image 3">
+                            <img src="img/acer-aspire-new/ace5.jpeg" alt="Extra Image 4">
+                        </div>
+                    </div>
+                    <div class="left-zone"></div>
+                    <div class="right-zone"></div>
+                </div>
+            </div>
+
+            <!-- You can add more rows similarly -->
+
+            <script>
+                // Function to handle click and swiper functionality for each row
+                document.querySelectorAll('.lprow-container').forEach((row) => {
+                    const lpimage = row.querySelector('.lpimage');
+                    const lpheading = row.querySelector('.lpheading');
+                    const aboutImage = row.querySelector('.lpabout-image');
+                    const extraImages = row.querySelector('.extra-images');
+                    const swiperContainer = row.querySelector('.lpswiper-container');
+                    const swiperWrapper = row.querySelector('.lpswiper-wrapper');
+                    const leftZone = row.querySelector('.left-zone');
+                    const rightZone = row.querySelector('.right-zone');
+                    let isDragging = false;
+                    let startPos = 0;
+                    let currentTranslate = 0;
+                    let prevTranslate = 0;
+
+                    // Click event to enlarge image, heading and reveal hidden elements
+                    lpimage.addEventListener('click', () => {
+                        lpimage.classList.toggle('enlarged');
+                        lpheading.classList.toggle('enlarged');
+                        aboutImage.classList.toggle('visible');
+                        extraImages.classList.toggle('visible');
+
+                        // Adjust other rows when the current row expands or collapses
+                        const isEnlarged = lpimage.classList.contains('enlarged');
+                        row.style.marginBottom = isEnlarged ? '00px' : '-150px'; // Create space below the enlarged image
+                    });
+
+                    // Move swiper left and right with click zones
+                    function moveSwiper(direction) {
+                        const swipeAmount = 500;
+                        const maxTranslate = -(swiperWrapper.scrollWidth - swiperContainer.clientWidth);
+
+                        if (direction === 'left') {
+                            currentTranslate += swipeAmount;
+                            if (currentTranslate > 0) currentTranslate = 0;
+                        } else if (direction === 'right') {
+                            currentTranslate -= swipeAmount;
+                            if (currentTranslate < maxTranslate) currentTranslate = maxTranslate;
+                        }
+
+                        swiperWrapper.style.transform = `translateX(${currentTranslate}px)`;
+                    }
+
+                    // Left zone click to move swiper left
+                    leftZone.addEventListener('click', () => moveSwiper('left'));
+
+                    // Right zone click to move swiper right
+                    rightZone.addEventListener('click', () => moveSwiper('right'));
+
+                    // Drag and swipe functionality
+                    swiperWrapper.addEventListener('mousedown', startDrag);
+                    swiperWrapper.addEventListener('mouseup', endDrag);
+                    swiperWrapper.addEventListener('mouseleave', endDrag);
+                    swiperWrapper.addEventListener('mousemove', drag);
+
+                    function startDrag(e) {
+                        if (!lpimage.classList.contains('enlarged')) return;
+
+                        isDragging = true;
+                        startPos = e.clientX;
+                        swiperWrapper.style.cursor = 'grabbing';
+                    }
+
+                    function endDrag() {
+                        if (!isDragging) return;
+
+                        isDragging = false;
+                        prevTranslate = currentTranslate;
+                        swiperWrapper.style.cursor = 'grab';
+                    }
+
+                    function drag(e) {
+                        if (!isDragging) return;
+
+                        const currentPos = e.clientX;
+                        const diff = currentPos - startPos;
+                        currentTranslate = prevTranslate + diff;
+                        swiperWrapper.style.transform = `translateX(${currentTranslate}px)`;
+                    }
+                });
+            </script>
+        </div>
+
+
+
+
+        <!-- <div class="project-section">
+            <h3>Honda (Commercial 23-24)</h3>
+        </div>
+        <div class="body">
+            <div class="container1x">
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/1.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/2.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/3.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img
+                            src="https://images.unsplash.com/photo-1579310962131-aa21f240d986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- change -->
+
+        <!-- <div class="project-section">
+            <h3>Honda (Commercial 23-24)</h3>
+            <div class="row"></div>
+                <div class="col-md-4">
+                    <a href="img/commercial/Honda/1.jpeg" data-lightbox="honda">
+                        <img style="cursor: pointer;" src="img/commercial/Honda/1.jpeg" alt="Honda Image 1"
+                            class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="img/commercial/Honda/2.jpeg" data-lightbox="honda">
+                        <img src="img/commercial/Honda/2.jpeg" alt="Honda Image 2" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="img/commercial/Honda/3.jpeg" data-lightbox="honda">
+                        <img src="img/commercial/Honda/3.jpeg" alt="Honda Image 3" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Tech Mahindra Project -->
+        <!-- <div class="project-section">
+            <h3>Tech Mahindra (Commercial 23-24)</h3>
+        </div>
+        <div class="body">
+            <div class="container1x">
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/1.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/2.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/3.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img
+                            src="https://images.unsplash.com/photo-1579310962131-aa21f240d986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- <div class="project-section">
+            <h3>Tech Mahindra (Commercial 23-24)</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="img/commercial/Tech Mahindra/01.jpeg" data-lightbox="tech-mahindra">
+                        <img src="img/commercial/Tech Mahindra/01.jpeg" alt="Tech Mahindra Image 1" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="img/commercial/Tech Mahindra/03.jpeg" data-lightbox="tech-mahindra">
+                        <img src="img/commercial/Tech Mahindra/03.jpeg" alt="Tech Mahindra Image 2" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="img/commercial/Tech Mahindra/04.jpeg" data-lightbox="tech-mahindra">
+                        <img src="img/commercial/Tech Mahindra/04.jpeg" alt="Tech Mahindra Image 3" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Cleo County -->
+        <!-- <div class="project-section">
+            <h3>Cleo County (Residential 2023)</h3>
+        </div>
+        <div class="body">
+            <div class="container1x">
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/1.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/2.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/3.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img
+                            src="https://images.unsplash.com/photo-1579310962131-aa21f240d986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="project-section">
+            <h3>Cleo County (Residential 2023)</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="img/interior/Tarun-Cleo-County/1.jpeg" data-lightbox="cleo-county">
+                        <img src="img/interior/Tarun-Cleo-County/1.jpeg" alt="Cleo County Image 1" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="img/interior/Tarun-Cleo-County/2.jpeg" data-lightbox="cleo-county">
+                        <img src="img/interior/Tarun-Cleo-County/2.jpeg" alt="Cleo County Image 2" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="img/interior/Tarun-Cleo-County/3.jpeg" data-lightbox="cleo-county">
+                        <img src="img/interior/Tarun-Cleo-County/3.jpeg" alt="Cleo County Image 3" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Acer Aspire -->
+        <!-- <div class="project-section">
+            <h3>Acer Aspire</h3>
+        </div>
+        <div class="body">
+            <div class="container1x">
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/1.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/2.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/3.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img
+                            src="https://images.unsplash.com/photo-1579310962131-aa21f240d986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="project-section">
+            <h3>Acer Aspire</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="img/interior/ACE ASPIRE/1.jpeg" data-lightbox="cleo-county">
+                        <img src="img/interior/ACE ASPIRE/1.jpeg" alt="Cleo County Image 1" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="img/interior/ACE ASPIRE/2.jpeg" data-lightbox="cleo-county">
+                        <img src="img/interior/ACE ASPIRE/2.jpeg" alt="Cleo County Image 2" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="img/interior/ACE ASPIRE/3.jpeg" data-lightbox="cleo-county">
+                        <img src="img/interior/ACE ASPIRE/3.jpeg" alt="Cleo County Image 3" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Flow More -->
+        <!-- <div class="project-section">
+            <h3>Flow More (Residential 2023)</h3>
+        </div>
+        <div class="body">
+            <div class="container1x">
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/1.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/2.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/3.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img
+                            src="https://images.unsplash.com/photo-1579310962131-aa21f240d986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="project-section">
+            <h3>Flow More (Residential 2023)</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="img/commercial/FLOW MORE/1.jpg" data-lightbox="cleo-county">
+                        <img src="img/commercial/FLOW MORE/1.jpg" alt="Cleo County Image 1" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="img/commercial/FLOW MORE/2.jpg" data-lightbox="cleo-county">
+                        <img src="img/commercial/FLOW MORE/2.jpg" alt="Cleo County Image 2" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="img/commercial/FLOW MORE/3.jpg" data-lightbox="cleo-county">
+                        <img src="img/commercial/FLOW MORE/3.jpg" alt="Cleo County Image 3" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- La Royal -->
+        <!-- <div class="project-section">
+            <h3>La Royal</h3>
+        </div>
+        <div class="body">
+            <div class="container1x">
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/1.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/2.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img src="./img/commercial/Honda/3.jpeg">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1x">
+                    <div class="imgBx">
+                        <img
+                            src="https://images.unsplash.com/photo-1579310962131-aa21f240d986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80">
+                    </div>
+                    <div class="content1x">
+                        <div>
+                            <h2>Image Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias
+                                quidem
+                                iusto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="project-section">
+            <h3>La Royal</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="img/interior/La-Royale/la(1).jpg" data-lightbox="cleo-county">
+                        <img src="img/interior/La-Royale/la(1).jpg" alt="Cleo County Image 1" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="img/interior/La-Royale/la(2).jpg" data-lightbox="cleo-county">
+                        <img src="img/interior/La-Royale/la(2).jpg" alt="Cleo County Image 2" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="img/interior/La-Royale/la(3).jpeg" data-lightbox="cleo-county">
+                        <img src="img/interior/La-Royale/la(11).jpg" alt="Cleo County Image 3" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+    <!--/projects -->
+
+    <!-- clients section -->
+
+    <div class="row-fluid  margin-lg-55t no-padd-md">
+        <div class=" margin-lg-55t col-sm-12 margin-lg-30b ">
+            <div class=" no-padd">
+                <div class="heading  left dark">
+                    <div class="subtitle ">CLIENTS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container no-padd"></div>
+    <div id="ourclients">
+        <div class="clients-wrap">
+            <ul id="clientlogo" class="clearfix">
+                <li>
+                    <img src="img/clients/clients-1.png" alt="Logo">
+                </li>
+                <li>
+                    <img src="img/clients/clients-2.png" alt="Logo">
+                </li>
+                <li>
+                    <img src="img/clients/clients-3.png" alt="Logo">
+                </li>
+                <li>
+                    <img src="img/clients/clients-4.png" alt="Logo">
+                </li>
+                <li>
+                    <img src="img/clients/clients-5.png" alt="Logo">
+                </li>
+                <li>
+                    <img src="img/clients/clients-6.png" alt="Logo">
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <!--/clients -->
+    <!--/MAIN BODY-->
+
+    <!-- testimonial -->
+    <div class="container no-padd">
+        <div class="row-fluid  margin-lg-10t margin-sm-20t">
+            <div class="col-sm-12 no-padd">
+                <div class="column-inner ">
+                    <div class="heading  left dark">
+                        <div class="subtitle ">TESTIMONIALS</div>
+                        <h2 class="title">They love us.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="row row-fluid margin-lg-10t">
+
+            <div class="testimonials-wrapper  no-figure">
+                <div class="testimonials-swiper swiper-container" data-speed='2000' data-loop='1' data-autoplay='3000'
+                    data-center='0' data-mode='vertical' data-slides-per-view='1' data-lg-slides='1,0'
+                    data-md-slides='1,0' data-sm-slides='1,0' data-xs-slides='1,0'>
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonials-item">
+
+                                <span class="testimonials-icon fa fa fa-quote-right"></span>
+
+                                <blockquote class="testimonials-description">
+                                    <p>
+                                        Our extended gratitude to Sahil and his team. Sahil is very professional and
+                                        thorough-what a great designer! His persistence and dedication were invaluable.
+                                    </p>
+                                </blockquote>
+                                <h4 class="testimonials-author">Vinayak Bhardwaj</h4>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonials-item">
+
+                                <span class="testimonials-icon fa fa fa-quote-right"></span>
+
+                                <blockquote class="testimonials-description">
+                                    <p>An exceptional service matched with an excellent quality of work.
+                                    </p>
+                                </blockquote>
+                                <h4 class="testimonials-author">Pawan Mishra</h4>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonials-item">
+
+                                <span class="testimonials-icon fa fa fa-quote-right"></span>
+
+                                <blockquote class="testimonials-description">
+                                    <p>
+                                        Working with Sahil and his team was a pleasure. They balanced the architectural
+                                        vision
+                                        and the project realities beautifully, had a deep understanding of our
+                                        priorities, and
+                                        operated responsively and professionally to all matters. The blend of his
+                                        personal style
+                                        and an understanding of ours led to a beautiful, practical, and unique home.
+                                    </p>
+                                </blockquote>
+                                <h4 class="testimonials-author">Pradeep Mishra</h4>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- If we need pagination -->
+                    <div class="testimonials-pagination-wrapper">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--/testimonial -->
+
+    <!-- old instagram post section  -->
+
+    <div class="wrapperes">
+        <div class="testimonial">
+            <ul class="testimonial-ul">
+                <li class="testimonial-slide active">
+                    <p class="slidePara"> Architecture is a visual art and the buildings speak for themselves.<br>
+                        <em>Julia Morgan</em>
+                    </p>
+                </li>
+                <li class="testimonial-slide">
+                    <p class="slidePara"> Architecture is not so much a knowledge of form, but a form of knowledge. <br>
+                        <em>Bernard Tschumi</em>
+                    </p>
+                </li>
+                <li class="testimonial-slide">
+                    <p class="slidePara"> One of the greatest beauty of architecture is that each time it is like life
+                        starting all over again.<br>
+                        <em>Renzo Piano</em>
+                    </p>
+                </li>
+                <li class="testimonial-slide">
+                    <p class="slidePara">Architecture should speak of its time and place, but yearn for timelessness.
+                        <br>
+                        <em>Frank Gehry</em>
+                    </p>
+                </li>
+                <span class="top-left"></span>
+                <span class="top-right"></span>
+            </ul>
+        </div>
+    </div>
+
+    <a href="https://wa.me/919971225352" class="btn-whatsapp-pulse">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <!--/MAIN BODY-->
+
+
+    <!-- START FOOTER -->
+    <footer class="prague-footer default">
+        <div class="footer-content-outer">
+            <!-- Top content: logo, navigation, and contact info -->
+            <div class="footer-top-content">
+
+                <div class="prague-footer-main-block">
+                    <div class="prague-logo">
+                        <a href="/" class="logo_link">
+                            <span class="text_logo">Ardor</span>
+                        </a>
+                    </div>
+                    <div class="footer-main-content">
+                        <p>Ardor-Studio is founded on the principle of collective conception. Since inception, our
+                            practice has embraced exchange, idea cross-pollination, collaborative effort, shared
+                            knowledge, and boundless enthusiasm.</p>
+                    </div>
+                </div>
+
+                <!-- Navigation block -->
+                <div class="prague-footer-main-block">
+                    <div class="prague-logo">
+                        <span class="text_logo">NAVIGATION</span>
+                    </div>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Services</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact info block -->
+                <div class="prague-footer-info-block">
+                    <h6 class="footer-info-block-title">GET IN TOUCH</h6>
+                    <div class="footer-info-block-content">
+                        <p><a href="tel:9971225352">+91 (997) 122 53 52</a></p>
+                        <p><a href="mailto:ardor@ardorstudios.in">ardor@ardorstudios.in</a></p>
+                        <p>12/27 L.G.F, Vasundhara, Ghaziabad - 201012</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="horizontal-line"></div>
+
+
+            <!-- Bottom content: copyright and social links -->
+            <div class="footer-bottom-content">
+                <!-- Copyright text -->
+                <div class="footer-copyright">
+                    <p>© 2024 Ardor Studios | All rights reserved</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>Designed and Developed by Venturesgrow</p>
+                </div>
+
+                <!-- Social media links -->
+                <div class="prague-social-nav">
+                    <ul class="social-content">
+                        <li>
+                            <a target="_blank" href="https://vimeo.com/user61218864">
+                                <i aria-hidden="true" class="fa fa-vimeo"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/Ardorstudios.in/">
+                                <i aria-hidden="true" class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.instagram.com/ardorstudios/">
+                                <i aria-hidden="true" class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--/END FOOTER-->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/tweenMax.min.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/foxlazy.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/qt.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>$(function () {
+            var $clientslider = $('#clientlogo');
+            var clients = $clientslider.children().length;
+            var clientwidth = (clients * 220);
+            $clientslider.css('width', clientwidth);
+            var rotating = true;
+            var clientspeed = 1800;
+            var seeclients = setInterval(rotateClients, clientspeed);
+            $(document).on({
+                mouseenter: function () {
+                    rotating = false;
+                },
+                mouseleave: function () {
+                    rotating = true;
+                }
+            }, '#ourclients');
+            function rotateClients() {
+                if (rotating != false) {
+                    var $first = $('#clientlogo li:first');
+                    $first.animate({
+                        'margin-left': '-220px'
+                    }, 2000, function () {
+                        $first.remove().css({
+                            'margin-left': '0px'
+                        });
+                        $('#clientlogo li:last').after($first);
+                    });
+                }
+            }
+        });</script>
+
+
+</body>
+
+</html>
+
+<!-- whatsapp-icon -->
+<style type="text/css">
+    .btn-whatsapp-pulse {
+        background: #25d366;
+        color: white;
+        position: fixed;
+        bottom: 70px;
+        right: 20px;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        /* Adjust width as needed */
+        height: 70px;
+        /* Adjust height as needed */
+        padding: 0;
+        /* Adjust padding to fit icon better */
+        text-decoration: none;
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+        animation: pulse 1.5s ease-out infinite;
+        z-index: 9999;
+        /* Ensure it's above other content */
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+        }
+
+        80% {
+            box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+        }
+    }
+</style>
