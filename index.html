@@ -28,35 +28,9 @@
 
 
 
-    <!--PRELOADER-->
-    <!-- <div class="prague-loader">
-        <div class="prague-loader-wrapper">
-            <div class="prague-loader-bar">
-                ARDOR
-                <br>
-                <p>Design Dimension</p>
-            </div>
-        </div>
-    </div>
-     -->
 
-
-
-
-
-
+    <!-- start preloader  -->
     <style>
-        /* * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
- 
- body, html {
-     height: 100%;
-     overflow: hidden;
- } */
-
         #preloader {
             position: fixed;
             top: 0;
@@ -153,7 +127,7 @@
 
 
 
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div id="loader-container">
             <h1 id="loader-text">
                 <span style="font-size: 50px; font-weight: 800;">A</span>
@@ -164,7 +138,7 @@
             </h1>
             <p id="fade-text">Design Dimension</p>
         </div>
-    </div>
+    </div> -->
 
 
     <script>
@@ -187,19 +161,14 @@
         });
     </script>
 
-
-
-
-
-
-
     <!--/PRELOADER-->
 
 
 
 
 
-    <!--HEADER-->
+    <!-- start HEADER-->
+
     <header class="prague-header simple sticky-menu sticky-mobile-menu light ">
         <!--LOGO-->
         <div class="prague-logo">
@@ -231,7 +200,7 @@
 
                                 <li
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                                    <a href="projects.html">Projects</a>
+                                    <a href="projects.html">Services</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
                                                 href="Interior.html">Interior
@@ -244,6 +213,10 @@
                                                 href="cig.html">CGI</a></li>
                                     </ul>
 
+                                </li>
+                                <li
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                                    <a href="#Latest-projects">Projects</a>
                                 </li>
                                 <li
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
@@ -390,6 +363,7 @@
     </header>
     <!--END HEADER-->
 
+
     <!--MAIN BODY-->
 
     <!-- 
@@ -468,18 +442,21 @@
         }
     </style>
 
-    <!-- /main body  -->
+    <!-- /MAIN BODY HERO  -->
 
-    <!-- insta-feeds -->
+
+    <!-- INSTAGRAM-FEEDS -->
     <div class="no-padd" style="max-width: 95%; margin: 0 auto; margin-top: 50px;">
         <div class="elfsight-app-0b2ce19b-6359-499c-ae29-42f483a46d89" data-elfsight-app-lazy></div>
     </div>
+    <!-- /INSTAGRAM-FEEDS -->
 
+    <!-- start blog -->
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <div class="no-padd " style="margin: 0 auto; margin-top: 50px;">
         <div class="elfsight-app-41567b9d-5689-4288-a302-f55bc05b8b48 blogs" data-elfsight-app-lazy></div>
     </div>
-    <!-- /insta-feeds -->
+    <!-- end blog -->
 
 
     <!--projects -->
@@ -683,12 +660,12 @@
                                     <div class="portfolio-item">
                                         <div class="prague-services-wrapper">
                                             <img src="img/house.png" style="margin-bottom: 10px;  width:64px;" />
-                                            <h3 class="services-item-title">Residential</h3>
+                                            <h3 class="services-item-title">Interior</h3>
                                             <div class="services-item-description">
                                                 <p>Crafting Unique Residential Spaces with Thoughtful Design Solutions.
                                                 </p>
                                             </div>
-                                            <a href="residential.html" class="prague-services-link a-btn-2 creative"
+                                            <a href="Interior.html" class="prague-services-link a-btn-2 creative"
                                                 target="_self">
                                                 <span class="a-btn-line"></span>
                                                 READ
@@ -761,10 +738,11 @@
 
     <div class="container-fluid no-padd">
         <div class="row-fluid margin-lg-55t no-padd-md">
-            <div class="margin-lg-55t col-sm-12 margin-lg-30b">
+            <div id="Latest-projects" class="margin-lg-55t col-sm-12 margin-lg-30b">
                 <div class="no-padd">
                     <div class="heading left dark">
-                        <div style="font-weight: 500;" class="subtitle latest">LATEST PROJECTS</div>
+                        <div style="font-weight: 500;" class="subtitle latest">LATEST PROJECTS
+                        </div>
                         <h2 class="title">Make it with passion.</h2>
                     </div>
                 </div>
@@ -920,10 +898,6 @@
     </style>
 
     <div class="container-fluid no-padd">
-        <!-- Honda Project -->
-
-
-
         <style>
             .lpbody {
                 font-family: Arial, sans-serif;
@@ -932,9 +906,7 @@
                 background-color: #f0f0f0;
                 user-select: none;
                 vertical-align: middle;
-                /* margin-top: -50px; */
-
-
+                margin-bottom: 50px;
             }
 
             .lprow-container.enlarged {
@@ -967,6 +939,10 @@
                 display: flex;
                 transition: transform 1.5s ease;
                 text-align: center;
+                margin-left: 100px;
+                align-items: center;
+                text-align: center;
+                justify-content: start;
             }
 
             .lpswiper-item {
@@ -977,12 +953,15 @@
                 padding: 10px;
                 flex-shrink: 0;
                 box-sizing: border-box;
+                margin-left: -250px;
             }
 
             .lpheading {
                 font-size: 20px;
                 transition: transform 1.5s ease;
                 margin-right: 55px;
+                margin-top: -120px;
+                /* to set the height  */
             }
 
             .lpimage {
@@ -996,6 +975,7 @@
             }
 
             .lpheading.enlarged {
+
                 transform: scale(1.2);
                 margin-right: 128px;
             }
@@ -1006,6 +986,8 @@
                 transition: transform 1.5s ease, opacity 1.5s ease;
                 max-width: 200px;
                 margin-top: 10px;
+                padding-left: 18px;
+                font-size: 14px;
             }
 
             .lpabout-image.visible {
@@ -1019,6 +1001,9 @@
                 opacity: 0;
                 transform: translateX(100%);
                 transition: transform 1.5s ease, opacity 1.5s ease;
+                flex-direction: row;
+                margin-left: -910px;
+                justify-content: left;
             }
 
             .extra-images img {
@@ -1081,89 +1066,222 @@
             .lpfive {}
 
             /* Responsive Styling */
-            @media screen and (max-width: 1200px) {}
+
+            .main-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .main-image {
+                width: 50%;
+                transition: transform 0.3s ease;
+            }
+
+            .about-image-section {
+                width: 40%;
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0.3s ease, opacity 0.3s ease;
+            }
+
+            .main-image.enlarged~.about-image-section {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .heading {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .image-swiper {
+                display: none;
+                width: 100%;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .image-swiper img {
+                display: inline-block;
+                width: 200px;
+                margin-right: 10px;
+                transition: transform 0.3s ease;
+            }
+
+            .image-swiper img:hover {
+                transform: scale(1.1);
+            }
+
+            .main-image.enlarged~.image-swiper {
+                display: flex;
+            }
+
+
+            /* Responsive Styling */
 
             @media screen and (max-width: 1350px) {
                 .lpabout-image {
                     display: none;
                 }
+            }
 
-                .main-swiper-section {
+            @media screen and (max-width: 1000px) {}
+
+
+            @media screen and (max-width: 1280px) {
+                .extra-image-one {
+                    margin-left: 100px;
+                }
+
+                .lpheading {
+                    line-height: 15px;
+                }
+            }
+
+            @media screen and (max-width: 1200px) {
+                .extra-image-one {
+                    margin-left: 300px;
+                }
+
+                .lpheading {
+                    padding-left: 100px;
+                    width: 100%;
+                }
+
+            }
+
+            @media screen and (max-width: 1100px) {
+                .extra-image-one {
+                    margin-left: 400px;
+                }
+
+                .lpheading {
                     padding-left: 200px;
+                    width: 100%;
                 }
 
-                .lpimage.enlarged {
-                    margin-top: 50px;
-                }
             }
 
-            @media screen and (max-width: 992px) {
-                .main-swiper-section {
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                .extra-images {
-
-                    padding-top: 200px;
-                    height: 10vh;
-                }
-
-                .lpabout-image {
-                    display: none;
-                }
-
-                .lpheading {
-                    margin-right: 0;
-                    margin-bottom: 10px;
-                }
-
-                .lpswiper-wrapper {
-                    flex-direction: column;
-                }
-
-                .lpimage {
-                    width: 260px;
-                }
-            }
-
-            @media screen and (max-width: 768px) {
-                .lpimage {
-                    width: 220px;
-                }
-
-                .lpheading {
-                    text-align: center;
-                    font-size: 18px;
-                    margin-right: 0;
-                }
-
-                .lprow-container {
-                    margin-bottom: 30px;
-                }
-            }
-
-            @media screen and (max-width: 576px) {
-                .main-swiper-section {
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                .lpimage {
-                    width: 180px;
-                }
+            @media screen and (max-width: 1000px) {
 
                 .lpheading {
                     font-size: 16px;
                 }
 
-                .lpheading.enlarged {
-                    margin-bottom: 50px;
+                .lpimage.enlarged {
+                    padding-right: 100px;
                 }
 
-                .lprow-container {
-                    margin-bottom: 20px;
+                /* .lpimage{
+                    width: 300px;
+                } */
+                .extra-images {
+                    gap: 40px;
                 }
+
+                .extra-images img {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+
+            .la-heading {
+                margin-top: -170px;
+            }
+
+            .tech-heading {
+                margin-top: -270px;
+            }
+
+            .honda-heading {
+                margin-top: -150px;
+            }
+
+            .ace-heading {
+                margin-top: -350px;
+            }
+
+            .honda-lpswiper-wrapper {
+                margin-left: -250px;
+            }
+
+            @media screen and (max-width: 800px) {
+            
+
+                .main-swiper-section {
+                    padding-top: 10px;
+                }
+
+                .lpheading {
+
+                    /* margin-left: 100px; */
+                }
+
+                /* .lpimage.enlarged {
+                    margin-right: 200px;
+                } */
+
+                .lpimage {
+                    width: 320px;
+                }
+
+                .lpswiper-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .extra-images img {
+                    width: 320px;
+                    height: 320px;
+                }
+
+                .extra-image-one {
+                    margin-left: 580px;
+                }
+
+                .flow-heading {
+                    margin-top: -30px;
+                }
+
+                .la-heading.enlarged {
+                    margin-top: -110px;
+                }
+
+                .tech-heading {
+                    margin-top: -200px;
+                }
+
+                .tech-heading.enlarged {
+                    margin-top: -100px;
+                }
+
+                .honda-heading {
+                    margin-top: -100px;
+                    margin-right: 100px;
+                }
+
+                .honda-heading.enlarged {
+                    margin-top: -50px;
+                }
+
+                .ace-heading {
+                    margin-top: -250px;
+                }
+
+                .ace-heading.enlarged {
+                    margin-top: -140px;
+                }
+
+                .honda-lpswiper-wrapper {
+                    margin-right: 0px;
+                    margin-top: 60px;
+                }
+
+                .honda-main {
+                    gap: 5px;
+                }
+
             }
         </style>
 
@@ -1171,11 +1289,10 @@
             <!-- Row 1 -->
             <div class="lprow-container">
                 <div class="lpswiper-container">
-                    <div class="lpswiper-wrapper"
-                        style="margin-left: 100px; align-items: center; text-align: center; justify-content: start;">
+                    <div class="lpswiper-wrapper">
                         <!-- Main Image and Heading -->
-                        <div class="lpswiper-item main-swiper-section" style="margin-left:-250px ;">
-                            <h1 class="lpheading">Flow More</h1>
+                        <div class="lpswiper-item main-swiper-section" style="margin-top: 20px;">
+                            <h1 class="lpheading flow-heading">Flow More</h1>
                             <img class="lpimage lpone" src="./img/flow-more-new/IMG_20200107_150236.jpg"
                                 alt="Main Image">
                         </div>
@@ -1183,15 +1300,14 @@
                         <!-- About Section -->
                         <div class="lpswiper-item" style="margin-left:-170px ; display: flex; justify-content: left;">
                             <p class="lpabout-image lpabout-section-responsive">This is an additional description about
-                                the
-                                image in Row 1. Lorem ipsum...
+                                the image in Row 1. Lorem ipsum...
                             </p>
                         </div>
 
                         <!-- Extra Images -->
-                        <div class="lpswiper-item extra-images"
-                            style="display: flex; flex-direction: row; margin-left:-910px ; justify-content: left;">
-                            <img src="img/flow-more-new/IMG_20200107_150244.jpg" alt="Extra Image 1">
+                        <div class="lpswiper-item extra-images">
+                            <img class="extra-image-one" src="img/flow-more-new/IMG_20200107_150244.jpg"
+                                alt="Extra Image 1">
                             <img src="img/flow-more-new/IMG_20200107_150553.jpg" alt="Extra Image 2">
                             <img src="img/flow-more-new/IMG_20200107_150745.jpg" alt="Extra Image 3">
                             <img src="img/flow-more-new/IMG_20200107_151412.jpg" alt="Extra Image 4">
@@ -1208,7 +1324,7 @@
                     <div class="lpswiper-wrapper" style="margin-left: 110px">
                         <!-- Main Image and Heading -->
                         <div class="lpswiper-item main-swiper-section" style="margin-left:-250px ;">
-                            <h1 class="lpheading">La Royal</h1>
+                            <h1 class="lpheading la-heading">La Royal</h1>
                             <img class="lpimage lptwo" src="./img/la-royal-new/la1.jpeg" alt="Main Image">
                         </div>
 
@@ -1220,9 +1336,8 @@
                         </div>
 
                         <!-- Extra Images -->
-                        <div class="lpswiper-item extra-images"
-                            style="display: flex; flex-direction: row; margin-left:-910px ; justify-content: left;">
-                            <img src="img/la-royal-new/la2.jpg" alt="Extra Image 1">
+                        <div class="lpswiper-item extra-images">
+                            <img class="extra-image-one" src="img/la-royal-new/la2.jpg" alt="Extra Image 1">
                             <img src="img/la-royal-new/la3.jpg" alt="Extra Image 2">
                             <img src="img/la-royal-new/la4.jpeg" alt="Extra Image 3">
                             <img src="img/la-royal-new/la5.jpeg" alt="Extra Image 4">
@@ -1238,7 +1353,7 @@
                     <div class="lpswiper-wrapper" style="margin-left: 100px;">
                         <!-- Main Image and Heading -->
                         <div class="lpswiper-item main-swiper-section" style="margin-left:-250px ;">
-                            <h1 class="lpheading">Tech-Mahindra</h1>
+                            <h1 class="lpheading tech-heading">Tech-Mahindra</h1>
                             <img class="lpimage lpthree" src="img/tech-mahindra-new/tech7.jpeg" alt="Main Image">
                         </div>
 
@@ -1250,9 +1365,8 @@
                         </div>
 
                         <!-- Extra Images -->
-                        <div class="lpswiper-item extra-images"
-                            style="display: flex; flex-direction: row; margin-left:-910px ; justify-content: left;">
-                            <img src="img/tech-mahindra-new/tech2.jpeg" alt="Extra Image 1">
+                        <div class="lpswiper-item extra-images">
+                            <img class="extra-image-one" src="img/tech-mahindra-new/tech2.jpeg" alt="Extra Image 1">
                             <img src="img/tech-mahindra-new/tech3.jpeg" alt="Extra Image 2">
                             <img src="img/tech-mahindra-new/tech4.jpeg" alt="Extra Image 3">
                             <img src="img/tech-mahindra-new/tech5.jpeg" alt="Extra Image 4">
@@ -1265,10 +1379,10 @@
 
             <div class="lprow-container">
                 <div class="lpswiper-container">
-                    <div class="lpswiper-wrapper" style="margin-left: 170px">
+                    <div class="lpswiper-wrapper honda-lpswiper-wrapper" style="margin-left: 170px">
                         <!-- Main Image and Heading -->
-                        <div class="lpswiper-item main-swiper-section" style="margin-left:-250px ;">
-                            <h1 class="lpheading">Honda</h1>
+                        <div class="lpswiper-item main-swiper-section honda-main">
+                            <h1 class="lpheading honda-heading">Honda</h1>
                             <img class="lpimage" src="./img/honda-new/honda1.jpg" alt="Main Image">
                         </div>
 
@@ -1281,9 +1395,8 @@
                         </div>
 
                         <!-- Extra Images -->
-                        <div class="lpswiper-item extra-images"
-                            style="display: flex; flex-direction: row; margin-left:-910px ; justify-content: left;">
-                            <img src="./img/honda-new/honda2.jpeg" alt="Extra Image 1">
+                        <div class="lpswiper-item extra-images">
+                            <img class="extra-image-one" src="./img/honda-new/honda2.jpeg" alt="Extra Image 1">
                             <img src="./img/honda-new/honda3.jpeg" alt="Extra Image 2">
                             <img src="./img/honda-new/honda4.jpeg" alt="Extra Image 3">
                             <img src="./img/honda-new/honda5.jpeg" alt="Extra Image 4">
@@ -1294,12 +1407,12 @@
                 </div>
             </div>
 
-            <div class="lprow-container" style="margin-top: 50px;">
+            <div class="lprow-container" style="margin-top: 50px; margin-bottom: 50px;">
                 <div class="lpswiper-container">
                     <div class="lpswiper-wrapper" style="margin-left: 130px">
                         <!-- Main Image and Heading -->
                         <div class="lpswiper-item main-swiper-section" style="margin-left:-250px ;">
-                            <h1 class="lpheading">Acer Aspire</h1>
+                            <h1 class="lpheading ace-heading">Ace Aspire</h1>
                             <img class="lpimage lpfive" src="img/acer-aspire-new/ace6.jpeg" alt="Main Image">
                         </div>
 
@@ -1311,9 +1424,8 @@
                         </div>
 
                         <!-- Extra Images -->
-                        <div class="lpswiper-item extra-images"
-                            style="display: flex; flex-direction: row; margin-left:-910px ; justify-content: left;">
-                            <img src="img/acer-aspire-new/ace2.jpeg" alt="Extra Image 1">
+                        <div class="lpswiper-item extra-images">
+                            <img class="extra-image-one" src="img/acer-aspire-new/ace2.jpeg" alt="Extra Image 1">
                             <img src="img/acer-aspire-new/ace3.jpeg" alt="Extra Image 2">
                             <img src="img/acer-aspire-new/ace4.jpeg" alt="Extra Image 3">
                             <img src="img/acer-aspire-new/ace5.jpeg" alt="Extra Image 4">

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Reveal Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .row {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .heading {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .main-image-container {
+            position: relative;
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 400px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .main-image:hover {
+            transform: scale(1.05);
+        }
+
+        .extra-images-container {
+            display: none;
+            justify-content: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .swiper {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .extra-image {
+            width: 350px;
+            margin: 0 5px;
+        }
+
+        .extra-image.active {
+            display: block;
+        }
+
+        .invisible-button {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 20%;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .left-button {
+            left: 0;
+        }
+
+        .right-button {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Row 1 -->
+        <div class="row">
+            <h2 class="heading">Heading 1</h2>
+            <div class="main-image-container">
+                <img src="img/about-us/aboutsus.jpg" alt="Main Image 1" class="main-image" data-row="1">
+                <div class="extra-images-container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <img src="img/about-us/proc1.jpg" alt="Extra Image 1-1" class="extra-image">
+                            <img src="img/about-us/proc1.jpg" alt="Extra Image 1-2" class="extra-image">
+                            <img src="img/about-us/proc1.jpg" alt="Extra Image 1-3" class="extra-image">
+                            <img src="img/about-us/proc1.jpg" alt="Extra Image 1-4" class="extra-image">
+                            <img src="img/about-us/proc1.jpg" alt="Extra Image 1-5" class="extra-image">
+                        </div>
+                        <!-- Invisible buttons covering left and right 20% -->
+                        <div class="invisible-button left-button"></div>
+                        <div class="invisible-button right-button"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row">
+            <h2 class="heading">Heading 2</h2>
+            <div class="main-image-container">
+                <img src="main-image2.jpg" alt="Main Image 2" class="main-image" data-row="2">
+                <div class="extra-images-container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <img src="extra-image2-1.jpg" alt="Extra Image 2-1" class="extra-image">
+                            <img src="extra-image2-2.jpg" alt="Extra Image 2-2" class="extra-image">
+                            <img src="extra-image2-3.jpg" alt="Extra Image 2-3" class="extra-image">
+                            <img src="extra-image2-4.jpg" alt="Extra Image 2-4" class="extra-image">
+                            <img src="extra-image2-5.jpg" alt="Extra Image 2-5" class="extra-image">
+                        </div>
+                        <!-- Invisible buttons covering left and right 20% -->
+                        <div class="invisible-button left-button"></div>
+                        <div class="invisible-button right-button"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row">
+            <h2 class="heading">Heading 3</h2>
+            <div class="main-image-container">
+                <img src="main-image3.jpg" alt="Main Image 3" class="main-image" data-row="3">
+                <div class="extra-images-container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <img src="extra-image3-1.jpg" alt="Extra Image 3-1" class="extra-image">
+                            <img src="extra-image3-2.jpg" alt="Extra Image 3-2" class="extra-image">
+                            <img src="extra-image3-3.jpg" alt="Extra Image 3-3" class="extra-image">
+                            <img src="extra-image3-4.jpg" alt="Extra Image 3-4" class="extra-image">
+                            <img src="extra-image3-5.jpg" alt="Extra Image 3-5" class="extra-image">
+                        </div>
+                        <!-- Invisible buttons covering left and right 20% -->
+                        <div class="invisible-button left-button"></div>
+                        <div class="invisible-button right-button"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainImages = document.querySelectorAll('.main-image');
+
+            mainImages.forEach(mainImage => {
+                mainImage.addEventListener('click', (event) => {
+                    const rowNumber = event.target.getAttribute('data-row');
+                    const extraImagesContainer = document.querySelector(`.row:nth-child(${rowNumber}) .extra-images-container`);
+                    const swiperWrapper = extraImagesContainer.querySelector('.swiper-wrapper');
+
+                    // Toggle visibility of extra images on main image click
+                    if (extraImagesContainer.style.display === 'flex') {
+                        extraImagesContainer.style.display = 'none';
+                    } else {
+                        extraImagesContainer.style.display = 'flex';
+                        swiperWrapper.style.transform = 'translateX(0)'; // Reset position
+                    }
+                });
+
+                // Swiping functionality for invisible buttons
+                const rowNumber = mainImage.getAttribute('data-row');
+                const swiperWrapper = document.querySelector(`.row:nth-child(${rowNumber}) .swiper-wrapper`);
+                const extraImages = swiperWrapper.querySelectorAll('.extra-image');
+                let currentIndex = 0;
+
+                const leftButton = document.querySelector(`.row:nth-child(${rowNumber}) .left-button`);
+                const rightButton = document.querySelector(`.row:nth-child(${rowNumber}) .right-button`);
+
+                leftButton.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        swiperWrapper.style.transform = `translateX(-${currentIndex * 350}px)`; // Adjusted swipe distance
+                    }
+                });
+
+                rightButton.addEventListener('click', () => {
+                    if (currentIndex < extraImages.length - 1) {
+                        currentIndex++;
+                        swiperWrapper.style.transform = `translateX(-${currentIndex * 350}px)`; // Adjusted swipe distance
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

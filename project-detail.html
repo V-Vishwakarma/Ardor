@@ -26,22 +26,151 @@
 
 
   <!--PRELOADER-->
-  <div class="prague-loader">
-    <div class="prague-loader-wrapper">
-      <div class="prague-loader-bar">
-        ARDOR
-      </div>
+   <!-- start preloader  -->
+   <style>
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    #loader-container {
+        text-align: center;
+    }
+
+    #loader-text {
+        color: white;
+        font-size: 3rem;
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 0.2rem;
+        justify-content: center;
+    }
+
+    #loader-text span {
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: fade-in 0.5s ease forwards;
+    }
+
+    #loader-text span:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    #loader-text span:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+
+    #loader-text span:nth-child(3) {
+        animation-delay: 0.5s;
+    }
+
+    #loader-text span:nth-child(4) {
+        animation-delay: 0.7s;
+    }
+
+    #loader-text span:nth-child(5) {
+        animation-delay: 0.9s;
+    }
+
+    @keyframes fade-in {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    #fade-text {
+        color: white;
+        opacity: 0;
+        margin-top: 10px;
+        font-size: 1.2rem;
+        animation: text-fade 2s ease 1.5s forwards;
+    }
+
+    @keyframes text-fade {
+        to {
+            opacity: 1;
+        }
+    }
+
+    #loader-text.move-up {
+        animation: move-up 1s ease forwards;
+        letter-spacing: 0.2rem;
+        /* Initial letter spacing */
+    }
+
+    @keyframes move-up {
+        to {
+            transform: translateY(-100vh);
+            letter-spacing: 30rem;
+            /* Increasing the gap between the letters */
+        }
+    }
+
+    #content {
+        display: none;
+        height: 100%;
+    }
+</style>
+
+
+
+
+<div id="preloader">
+    <div id="loader-container">
+        <h1 id="loader-text">
+            <span style="font-size: 50px; font-weight: 800;">A</span>
+            <span style="font-size: 50px; font-weight: 800;">R</span>
+            <span style="font-size: 50px; font-weight: 800;">D</span>
+            <span style="font-size: 50px; font-weight: 800;">O</span>
+            <span style="font-size: 50px; font-weight: 800;">R</span>
+        </h1>
+        <p id="fade-text">Design Dimension</p>
     </div>
-  </div>
+</div>
+
+
+<script>
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        const content = document.getElementById('content');
+        const loaderText = document.getElementById('loader-text');
+
+        // First, show letters one by one
+        setTimeout(() => {
+            loaderText.classList.add('move-up'); // Move text upwards and increase letter spacing
+        }, 2000); // Delay before text moves up
+
+        // Hide preloader and show content after animation completes
+        setTimeout(() => {
+            preloader.style.display = 'none';
+            content.style.display = 'block';
+            document.body.style.overflow = 'auto'; // Allow scrolling once the website is visible
+        }, 3000); // 3 seconds total delay for preloader
+    });
+</script>
+
+<!--/PRELOADER-->
   <!--/PRELOADER-->
 
   <!--HEADER-->
   <header class="prague-header simple sticky-menu sticky-mobile-menu dark">
-    <div class="prague-logo">
-      <a href="/" class="logo_link">
-        <span class="text_logo" style="color: #000;">Ardor studios</span>
+     <!--LOGO-->
+     <div class="prague-logo">
+      <a href="index.html" class="logo_link">
+          <span style="line-height: 0;" class="text_logo">Ardor <span style="font-size: 10px; line-height: 28px;">
+                  <br> Art of Define Spaces</span> </span>
       </a>
-    </div>
+  </div>
+  <!--/LOGO-->
 
     <div class="prague-header-wrapper">
       <div class="prague-navigation">
@@ -58,13 +187,13 @@
                 </li>
 
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                  <a href="#">Projects</a>
+                  <a href="projects.html">Services</a>
                   <ul class="sub-menu">
                     <li class="menu-item menu-item-type-post_type menu-item-object-page">
                       <a href="Interior.html">Interior </a>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                      <a href="residential.html">Residential</a>
+                      <a href="architecture.html">Architecture</a>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page">
                       <a href="commercial.html">Commercial</a>
